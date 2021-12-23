@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_switch/flutter_switch.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:switch_talk/custom_switch_widget.dart';
 void main() {
   runApp(const MaterialApp(
@@ -32,14 +30,14 @@ class _SwitchTalkState extends State<SwitchTalk> {
             Row(
               children: [
                 Expanded(
-                  child: CustomSwitchTalk(text: 'Text Labels',value: activeStatus, disabled: false, onToggle: (val){
+                  child: CustomSwitchTalk(text: 'Text Labels',value: activeStatus, disabled: false, onChanged: (val){
                     setState(() {
                       activeStatus = val;
                     });
                   }),
                 ),
                 Expanded(
-                  child: CustomSwitchTalk(text: 'Text Labels',value: activeStatus, disabled: false, onToggle: (val){
+                  child: CustomSwitchTalk(text: 'Text Labels',value: activeStatus, disabled: false, onChanged: (val){
                     setState(() {
                       activeStatus = val;
                     });
@@ -50,14 +48,14 @@ class _SwitchTalkState extends State<SwitchTalk> {
             Row(
               children: [
                 Expanded(
-                  child: CustomSwitchTalk(text: 'Text Labels',value: activeStatus, disabled: true, onToggle: (val){
+                  child: CustomSwitchTalk(text: 'Text Labels',value: activeStatus, disabled: true, onChanged: (val){
                     setState(() {
                       activeStatus = val;
                     });
                   }),
                 ),
                 Expanded(
-                  child: CustomSwitchTalk(value: activeStatus, disabled: true, onToggle: (val){
+                  child: CustomSwitchTalk(value: activeStatus, disabled: true, onChanged: (val){
                     setState(() {
                       activeStatus = val;
                     });
@@ -68,14 +66,14 @@ class _SwitchTalkState extends State<SwitchTalk> {
             Row(
               children: [
                 Expanded(
-                  child: CustomSwitchTalk(text: 'Text Labels',value: deActiveStatus, disabled: false, onToggle: (val){
+                  child: CustomSwitchTalk(text: 'Text Labels',value: deActiveStatus, disabled: false, onChanged: (val){
                     setState(() {
                       deActiveStatus = val;
                     });
                   }),
                 ),
                 Expanded(
-                  child: CustomSwitchTalk(value: deActiveStatus, disabled: false, onToggle: (val){
+                  child: CustomSwitchTalk(value: deActiveStatus, disabled: false, onChanged: (val){
                     setState(() {
                       deActiveStatus = val;
                     });
@@ -86,14 +84,14 @@ class _SwitchTalkState extends State<SwitchTalk> {
             Row(
               children: [
                 Expanded(
-                  child: CustomSwitchTalk(text: 'Text Labels',value: deActiveStatus, disabled: true, onToggle: (val){
+                  child: CustomSwitchTalk(text: 'Text Labels',value: deActiveStatus, disabled: true, onChanged: (val){
                     setState(() {
                       deActiveStatus = val;
                     });
                   }),
                 ),
                 Expanded(
-                  child: CustomSwitchTalk(value: deActiveStatus, disabled: true, onToggle: (val){
+                  child: CustomSwitchTalk(value: deActiveStatus, disabled: true, onChanged: (val){
                     setState(() {
                       deActiveStatus = val;
                     });
