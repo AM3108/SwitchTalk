@@ -30,14 +30,14 @@ class _SwitchTalkState extends State<SwitchTalk> {
             Row(
               children: [
                 Expanded(
-                  child: CustomSwitchTalk(text: 'Text Labels',value: activeStatus, disabled: false, onChanged: (val){
+                  child: CustomSwitchTalk(secondaryText: "Sexondary Text" ,icon: Icons.lock ,alignRight: false,primaryText: 'Text Labels',value: activeStatus, disabled: false, onChanged: (val){
                     setState(() {
                       activeStatus = val;
                     });
                   }),
                 ),
                 Expanded(
-                  child: CustomSwitchTalk(text: 'Text Labels',value: activeStatus, disabled: false, onChanged: (val){
+                  child: CustomSwitchTalk(secondaryText: "Secondary Text",primaryText: 'Text Labels',value: activeStatus, disabled: false, onChanged: (val){
                     setState(() {
                       activeStatus = val;
                     });
@@ -48,7 +48,7 @@ class _SwitchTalkState extends State<SwitchTalk> {
             Row(
               children: [
                 Expanded(
-                  child: CustomSwitchTalk(text: 'Text Labels',value: activeStatus, disabled: true, onChanged: (val){
+                  child: CustomSwitchTalk(primaryText: 'Text Labels',value: activeStatus, disabled: true, onChanged: (val){
                     setState(() {
                       activeStatus = val;
                     });
@@ -59,14 +59,14 @@ class _SwitchTalkState extends State<SwitchTalk> {
                     setState(() {
                       activeStatus = val;
                     });
-                  }, text: 'Text Labels',),
+                  }, primaryText: 'Text Labels',),
                 ),
               ],
             ),
             Row(
               children: [
                 Expanded(
-                  child: CustomSwitchTalk(text: 'Text Labels',value: deActiveStatus, disabled: false, onChanged: (val){
+                  child: CustomSwitchTalk(primaryText: 'Text Labels',value: deActiveStatus, disabled: false, onChanged: (val){
                     setState(() {
                       deActiveStatus = val;
                     });
@@ -77,14 +77,14 @@ class _SwitchTalkState extends State<SwitchTalk> {
                     setState(() {
                       deActiveStatus = val;
                     });
-                  }, text: 'Text Labels',),
+                  }, primaryText: 'Text Labels',),
                 ),
               ],
             ),
             Row(
               children: [
                 Expanded(
-                  child: CustomSwitchTalk(text: 'Text Labels',value: deActiveStatus, disabled: true, onChanged: (val){
+                  child: CustomSwitchTalk(primaryText: 'Text Labels',value: deActiveStatus, disabled: true, onChanged: (val){
                     setState(() {
                       deActiveStatus = val;
                     });
@@ -95,7 +95,7 @@ class _SwitchTalkState extends State<SwitchTalk> {
                     setState(() {
                       deActiveStatus = val;
                     });
-                  }, text: 'Text Labels',),
+                  }, primaryText: 'Text Labels',),
                 ),
               ],
             ),
