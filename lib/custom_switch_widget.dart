@@ -35,17 +35,7 @@ class CustomSwitchTalk extends StatelessWidget {
           children: [
             Row(
               children: [
-                alignRight == null || alignRight != true?
-                Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(right: 10,),
-                      child: primaryText != null ? _getPrimaryText : Container(),),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 10),
-                      child: secondaryText != null ? _getSecondaryText : Container(),),
-                  ],
-                ): Container(),
+                alignRight == null || alignRight != true? _getText : Container(),
                 Semantics(
                   label: semantics,
                   child:
@@ -54,17 +44,7 @@ class CustomSwitchTalk extends StatelessWidget {
                     onChanged: disabled ? null : onChanged,
                   ),
                 ),
-                alignRight != null && alignRight == true?
-                Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(right: 10),
-                      child: primaryText != null ? _getPrimaryText : Container(),),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 10),
-                      child: secondaryText != null ? _getSecondaryText : Container(),),
-                  ],
-                ): Container(),
+                alignRight != null && alignRight == true? _getText : Container(),
               ],
             ),
           ],
@@ -105,6 +85,19 @@ class CustomSwitchTalk extends StatelessWidget {
             color: Colors.grey
         ),
       ),
+    );
+  }
+
+  get _getText{
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(right: 10, left: 5),
+          child: primaryText != null ? _getPrimaryText : Container(),),
+        Padding(
+          padding: const EdgeInsets.only(right: 10, left: 5),
+          child: secondaryText != null ? _getSecondaryText : Container(),),
+      ],
     );
   }
 }
