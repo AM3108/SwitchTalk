@@ -30,14 +30,14 @@ class _SwitchTalkState extends State<SwitchTalk> {
             Row(
               children: [
                 Expanded(
-                  child: CustomSwitchTalk(secondaryText: "Sexondary Text" ,icon: Icons.lock ,alignRight: false,primaryText: 'Text Labels',value: activeStatus, disabled: false, onChanged: (val){
+                  child: CustomSwitchTalk(assetName: 'assets/team-communication.svg',alignRight: true,primaryText: 'Text Labels',status: activeStatus, disabled: false, onChanged: (val){
                     setState(() {
                       activeStatus = val;
                     });
                   }),
                 ),
                 Expanded(
-                  child: CustomSwitchTalk(secondaryText: "Secondary Text",primaryText: 'Text Labels',value: activeStatus, disabled: false, onChanged: (val){
+                  child: CustomSwitchTalk(secondaryText: "Secondary Text",primaryText: 'Text Labels',status: activeStatus, disabled: false, onChanged: (val){
                     setState(() {
                       activeStatus = val;
                     });
@@ -48,16 +48,34 @@ class _SwitchTalkState extends State<SwitchTalk> {
             Row(
               children: [
                 Expanded(
-                  child: CustomSwitchTalk(primaryText: 'Text Labels',value: activeStatus, disabled: true, onChanged: (val){
+                  child: CustomSwitchTalk(primaryText: 'Text Labels',status: activeStatus, disabled: true, onChanged: (val){
                     setState(() {
                       activeStatus = val;
                     });
                   }),
                 ),
                 Expanded(
-                  child: CustomSwitchTalk(value: activeStatus, disabled: true, onChanged: (val){
+                  child: CustomSwitchTalk(alignRight: true, status: activeStatus, disabled: true, onChanged: (val){
                     setState(() {
                       activeStatus = val;
+                    });
+                  },),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Expanded(
+                  child: CustomSwitchTalk(primaryText: 'Text Labels',status: deActiveStatus, disabled: false, onChanged: (val){
+                    setState(() {
+                      deActiveStatus = val;
+                    });
+                  }),
+                ),
+                Expanded(
+                  child: CustomSwitchTalk(alignRight: true,secondaryText: "Secondary Text",status: deActiveStatus, disabled: false, onChanged: (val){
+                    setState(() {
+                      deActiveStatus = val;
                     });
                   }, primaryText: 'Text Labels',),
                 ),
@@ -66,32 +84,14 @@ class _SwitchTalkState extends State<SwitchTalk> {
             Row(
               children: [
                 Expanded(
-                  child: CustomSwitchTalk(primaryText: 'Text Labels',value: deActiveStatus, disabled: false, onChanged: (val){
+                  child: CustomSwitchTalk(primaryText: 'Text Labels',status: deActiveStatus, disabled: true, onChanged: (val){
                     setState(() {
                       deActiveStatus = val;
                     });
                   }),
                 ),
                 Expanded(
-                  child: CustomSwitchTalk(value: deActiveStatus, disabled: false, onChanged: (val){
-                    setState(() {
-                      deActiveStatus = val;
-                    });
-                  }, primaryText: 'Text Labels',),
-                ),
-              ],
-            ),
-            Row(
-              children: [
-                Expanded(
-                  child: CustomSwitchTalk(primaryText: 'Text Labels',value: deActiveStatus, disabled: true, onChanged: (val){
-                    setState(() {
-                      deActiveStatus = val;
-                    });
-                  }),
-                ),
-                Expanded(
-                  child: CustomSwitchTalk(value: deActiveStatus, disabled: true, onChanged: (val){
+                  child: CustomSwitchTalk(status: deActiveStatus, disabled: true, onChanged: (val){
                     setState(() {
                       deActiveStatus = val;
                     });
